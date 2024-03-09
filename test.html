@@ -1,0 +1,315 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" class="icon" href="assets/Images/Icon.png">
+        <link rel="stylesheet" href="assets/Styles/cyberpunk.css">
+        <link rel="stylesheet" href="assets/Styles/main.css">
+        <title>Totally Not Murder Weapons Archive</title>
+        <style>
+            body {
+              background-image: url(assets/Images/background.jpg);
+              background-repeat: no-repeat;
+              background-attachment: fixed;
+              background-size: cover;
+              font-family: Arial, sans-serif;
+              margin: 0;
+              padding: 0;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              min-height: 200vh;
+            }
+
+           .header {
+            padding: 10px;
+              text-align: center;
+              width: 100%;
+              word-spacing: 30px;
+            }
+
+           #sub-header {
+              text-align: center;
+              padding: 10px;
+              width: 100%;
+              position: relative;
+              background-color: rgba(0, 0, 0, 0.5);
+              z-index: 1;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              box-sizing: border-box;
+              word-spacing: 4px;
+            }
+
+           .gun-icon-image {
+              width:initial; 
+              height: initial; 
+              margin-right: 1px;
+            }
+
+           .carousel-container {
+              width: 30%;
+              overflow: hidden;
+              position: relative;
+              border: 4px solid #5f0404;
+              margin: 20px;
+              z-index: 0;
+            }
+
+            .carousel {
+              display: flex;
+              width: 300%;
+              transition: transform 0.5s ease-in-out;
+            }
+
+           .carousel2 {
+              display: flex;
+              width: 1800%;
+              transition: transform 0.5s ease-in-out;
+            }
+
+            .slide {
+              width: 100%;
+              height: 100%;
+              box-sizing:content-box;
+              text-align: center;
+              padding: 20px;
+              color: #fff;
+            }
+
+            .button-container1{
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              display: flex;
+              width: 100%;
+              justify-content: start;
+              padding: 0 20px;
+              box-sizing: border-box;
+            }
+
+           .button-container2{
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              display: flex;
+              width: 100%;
+              justify-content: end;
+              padding: 0 20px;
+              box-sizing: border-box;
+            }
+
+            .button-container3{
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              display: flex;
+              width: 100%;
+              justify-content: start;
+              padding: 0 20px;
+              box-sizing: border-box;
+            }
+
+            .button-container4{
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              display: flex;
+              width: 100%;
+              justify-content: end;
+              padding: 0 20px;
+              box-sizing: border-box;
+            }
+            img {
+              width: 100%;
+              height: auto;
+              border-radius: 10px;
+            }
+
+           #footer {
+              position: fixed;
+              bottom: 0;
+              width: 100%;
+              padding: 6px;
+              text-align: center;
+            }
+            #prevBtn,
+            #nextBtn,
+            #prevBtn2,
+            #nextBtn2,
+            #prevBtn3,
+            #nextBtn3 {
+              font-size: 24px;
+              background: none;
+              border: none;
+              cursor: pointer;
+              color: aqua;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1 class="cyberpunk-font-og">Totally Not Murder Weapons Archive</h1>
+        
+        <div class="cyber-att" id="sub-header">
+            <img src="assets/Images/Gun Type Icon/Power_Icon.webp" alt="Power_Icon" class="gun-icon-image">
+            <p class="oxanium-font">Bullets can ricochet from hard surfaces</p>
+            <img src="assets/Images/Gun Type Icon/Smart_Icon.webp" alt="Smart_Icon" class="gun-icon-image">
+            <p class="oxanium-font">Fires tracer rounds that aim exclusively for a certain part (requires smart link hand cyberware)</p>
+            <img src="assets/Images/Gun Type Icon/Tech_Icon.webp" alt="Tech_Icon" class="gun-icon-image">
+            <p class="oxanium-font">Gun has the ability to charge up shots that can pierce through solid objects</p>
+        </div>
+        </div>
+
+         <!--First Carousel -->
+        <div class="carousel-container cyber-tile-big">
+            <div class="carousel">
+                <div class="slide">
+                    <img src="assets/Images/Guns/Pistols/Unity_Default.webp" alt="Unity_Default">
+                    <h1 class="oxanium-font">Unity Default</h1>
+                    <h3 class="oxanium-font">Power</h3>
+                    <p class="oxanium-font">Not much, but enough to pop some cherries</p>
+                </div>
+                <div class="slide">
+                    <img src="assets/Images/Guns/Pistols/Chao_Default.webp" alt="Chao_Default">
+                    <h1 class="oxanium-font">Chao Default</h1>
+                    <h3 class="oxanium-font">Smart</h3>
+                    <p class="oxanium-font">This baby is basically a smaller smg with the tracker rounds that goes for the head exclusively</p>
+                </div>
+                <div class="slide">
+                    <img src="assets/Images/Guns/Pistols/Kenshin_Default.webp" alt="Kenshin_Default">
+                    <h1 class="oxanium-font">Kenshin Default</h1>
+                    <h3 class="oxanium-font">Tech</h3>
+                    <p class="oxanium-font">A tech pistol that can charge up to 3 shots per burst</p>
+                </div>
+            </div>
+            <button class="button-container1" id="prevBtn" onclick="prevSlide()">&#10094;</button>
+            <button class="button-container2" id="nextBtn" onclick="nextSlide()">&#10095;</button>
+        </div>
+
+         <!--Second Carousel -->
+        <div class="carousel-container cyber-tile-big">
+            <div class="carousel2">
+                <div class="slide">
+                    <img src="assets/Images/Guns/ARs/Ajax_Default.webp" alt="">
+                    <h1 class="oxanium-font">Ajax Default</h1>
+                    <h3 class="oxanium-font">Power</h3>
+                    <p class="oxanium-font">A factory new piece of iron that kinda resembles a classic Russian gun</p>
+                </div>
+                <div class="slide">
+                    <img src="assets/Images/Guns/ARs/Ajax_Moron.webp" alt="">
+                    <h1 class="oxanium-font">Ajax (Moron Labe)</h1>
+                    <h3 class="oxanium-font">Power</h3>
+                    <p class="oxanium-font">An Ajax variant found by finishing off Anton Kolev near the Biotechnica facility</p>
+                </div>
+                <div class="slide">
+                    <img src="assets/Images/Guns/ARs/Ajax_Amazon.webp" alt="">
+                    <h1 class="oxanium-font">Ajax (Pit Bull)</h1>
+                    <h3 class="oxanium-font">Power</h3>
+                    <p class="oxanium-font">This puppy is loaded with armor penetrating rounds, perfect for those pesky MaxTac soldiers</p>
+                </div>
+                <div class="slide">
+                    <img src="assets/Images/Guns/ARs/Kyubi_Default.webp" alt="">
+                    <h1 class="oxanium-font">Kyubi Default</h1>
+                    <h3 class="oxanium-font">Power</h3>
+                    <p class="oxanium-font">A semi-auto rifle that fires with extreme precision</p>
+                </div>
+                <div class="slide">
+                    <img src="assets/Images/Guns/ARs/Kyubi_Legendary.webp" alt="">
+                    <h1 class="oxanium-font">Kyubi (X-mod-2)</h1>
+                    <h3 class="oxanium-font">Power</h3>
+                    <p class="oxanium-font">A variant of Kyubi with extra modifiers for whatever the hell the user want</p>
+                </div>
+                <div class="slide">
+                    <img src="assets/Images/Guns/ARs/Kyubi_Amazon.webp" alt="">
+                    <h1 class="oxanium-font">Kyubi (Chinook)</h1>
+                    <h3 class="oxanium-font">Power</h3>
+                    <p class="oxanium-font">Similar to the "Pit Bull", this one also possesses armor penetrating capacity but even with more precision</p>
+                </div>
+                <div class="slide">
+                    <img src="assets/Images/Guns/ARs/Kyubi_Myers.webp" alt="">
+                    <h1 class="oxanium-font">Kyubi (Hawk)</h1>
+                    <h3 class="oxanium-font">Power</h3>
+                    <p class="oxanium-font">President Myers' gun used for "self-defense" in operation "Phantom Liberty"</p>
+                </div>
+                <div class="slide">
+                    <img src="assets/Images/Guns/ARs/Copperhead_Default.webp" alt="">
+                    <h1 class="oxanium-font">Copperhead Default</h1>
+                    <h3 class="oxanium-font">Power</h3>
+                    <p class="oxanium-font">Sleek and Deadly, widely used by gangs accross NC</p>
+                </div>
+                <div class="slide">
+                    <img src="assets/Images/Guns/ARs/Copperhead_Genesis.webp" alt="">
+                    <h1 class="oxanium-font">Copperhead (Psalm 11:6)</h1>
+                    <h3 class="oxanium-font">Power</h3>
+                    <p class="oxanium-font">Fires... well... fire (thermal rounds) and the magazine is upgraded to 50 rounds per mag for extra fire spitting</p>
+                </div>
+                <div class="slide">
+                    <img src="assets/Images/Guns/ARs/Umbra_Default.webp" alt="">
+                    <h1 class="oxanium-font">Umbra Default</h1>
+                    <h3 class="oxanium-font">Power</h3>
+                    <p class="oxanium-font">Basically a piece of cheap iron. Just kill and toss. That's pretty much it</p>
+                </div>
+                <div class="slide">
+                    <img src="assets/Images/Guns/ARs/Umbra_Bebe.webp" alt="">
+                    <h1 class="oxanium-font">Umbra (Carmen)</h1>
+                    <h3 class="oxanium-font">Power</h3>
+                    <p class="oxanium-font">A specific variant of the Umbra, left by some fortunate chooms as a gift</p>
+                </div>
+                <div class="slide">
+                    <img src="assets/Images/Guns/ARs/Umbra_Legendary.webp" alt="">
+                    <h1 class="oxanium-font">Umbra (X-mod-2)</h1>
+                    <h3 class="oxanium-font">Power</h3>
+                    <p class="oxanium-font">Just like the other pieces of iron, this one also does the job of sending someone to their ancestors, but I think you don't wanna throw this one away after one use</p>
+                </div>
+                <div class="slide">
+                    <img src="assets/Images/Guns/ARs/Sidewinder_Default.webp" alt="">
+                    <h1 class="oxanium-font">Sidewinder Default</h1>
+                    <h3 class="oxanium-font">Smart</h3>
+                    <p class="oxanium-font">As long as you have a Smartlink on your hand, just spray and no need to pray, cuz they're gonna be dead anyway</p>
+                </div>
+                <div class="slide">
+                    <img src="assets/Images/Guns/ARs/Sidewinder_Divided.webp" alt="">
+                    <h1 class="oxanium-font">Sidewinder (Divided we stand)</h1>
+                    <h3 class="oxanium-font">Smart</h3>
+                    <p class="oxanium-font">Self diriecting toxic round. Boy, this thing sure is simmilar to a certain group of people from an infamous country</p>
+                </div>
+                <div class="slide">
+                    <img src="assets/Images/Guns/ARs/Masamune_Default.webp" alt="">
+                    <h1 class="oxanium-font">Masamune Default</h1>
+                    <h3 class="oxanium-font">Power</h3>
+                    <p class="oxanium-font">Manufactured by Arasaka, this thing shoots 3 rounds per burst, even if one round is enough...</p>
+                </div>
+                <div class="slide">
+                    <img src="assets/Images/Guns/ARs/Masamune_Arasaka_2077.webp" alt="">
+                    <h1 class="oxanium-font">Masamune (Nowaki)</h1>
+                    <h3 class="oxanium-font">Power</h3>
+                    <p class="oxanium-font">Basically a normal Masamune,  has slower fire rate but greater recoil control and stability</p>
+                </div>
+                <div class="slide">
+                    <img src="assets/Images/Guns/ARs/Masamune_Rogue.webp" alt="">
+                    <h1 class="oxanium-font">Masamune (Prejudice)</h1>
+                    <h3 class="oxanium-font">Power</h3>
+                    <p class="oxanium-font">Where there's Pride, there's also Prejudice. That's the nature of being a merc</p>
+                </div>
+                <div class="slide">
+                    <img src="assets/Images/Guns/ARs/Hercules_Prototype.webp" alt="">
+                    <h1 class="oxanium-font">Hercules Prototype</h1>
+                    <h3 class="oxanium-font">Smart</h3>
+                    <p class="oxanium-font">This hunk of raw steel is equipped with Militech's Smartlink that can guides the volley of bullets straight to your enemies faces</p>
+                </div>
+            </div>
+            <button class="button-container1" id="prevBtn2" onclick="prevSlide()">&#10094;</button>
+            <button class="button-container2" id="nextBtn2" onclick="nextSlide()">&#10095;</button>
+        </div>
+        
+        <div class="cyber-att" id="footer">All assets and copyrights related to the contents belong to CD PROJEKT RED</div>
+
+        <script src="assets/Scripts/script.js"></script>
+    </body>
+    </html>
+
+
